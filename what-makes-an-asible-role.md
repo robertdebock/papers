@@ -67,10 +67,12 @@ Create an Ansible role when:
 - You want to publish your role to [GitHub](https://github.com/) or GitLab.
 - Your playbook gets very long and does many tasks. (Move those tasks to a role)
 - Dependencies and ordering is becoming relevant.
+- You're describing a state that is idempotent.
 
 Create an Ansible playbook when:
 - You need to run tasks against a specific host.
 - A task is unique and can't be applied anywhere else.
 - Ordering (orchestration) is important.
 - [Ansible facts](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variables-discovered-from-systems-facts) need to be found on one host and are reused on another host.
+- You're describing an action, like "create report" or "restart service"
 ```
