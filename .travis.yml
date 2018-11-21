@@ -1,0 +1,6 @@
+---
+install:
+  - npm install -g markdown-pdf
+
+script:
+  - for file in *.md ; do markdown-pdf "${file}" ; done
