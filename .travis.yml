@@ -4,8 +4,7 @@ install:
 
 script:
   - for file in *.md ; do markdown-pdf "${file}" ; done
-  - ls -l
-  - find ./
+  - mkdir output
   - mv *.pdf output
 
 deploy:
