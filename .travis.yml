@@ -4,3 +4,14 @@ install:
 
 script:
   - for file in *.md ; do markdown-pdf "${file}" ; done
+  - mv *.pdf output
+
+deploy:
+  provider: pages
+  local-dir: output
+  target-branch: artifacts
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
